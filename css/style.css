@@ -1,0 +1,564 @@
+/* start global ruels */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+*::selection{
+    background-color:#0baeb19c;
+    color: white;
+}
+/* start vars */
+:root{
+    --main-color:#10cab7;
+    --background-hover:#eeeeee88;
+    --containrs-backgrounds:#eeeeee7a;
+    --main-width:80%;
+    font-family:Work Sans;
+    scroll-behavior: smooth;
+    background-color: #f7f7f7;
+
+}
+/* end vars */
+/* start media */
+@media (min-width:768px)
+{
+    .containr{
+        width: 750px;
+    }
+   
+}
+@media (min-width:992px)
+{
+    .containr{
+        width: 970px;
+    }
+}
+@media (min-width:1200px)
+{
+    .containr{
+        width: 1170px;
+    }
+}
+/* end media */
+/* end global ruels */
+/* start headr */
+div.parent{
+    width: 100%;
+}
+div.containr{
+    width: var(--main-width);
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img.logo{
+    width:70px;
+    height: auto;
+}
+.nav-links {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links .spans{
+    width: 25px;
+    height: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.nav-links span:not(:nth-child(2)){
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    margin-top: 3px;
+}
+.nav-links span:nth-child(2){
+    width: 60%;
+    height: 3px;
+    background-color: black;
+    margin-top: 3px;
+    transition: 0.3s;
+}
+.nav-links .spans:hover span:nth-child(2){
+    width: 100%;
+}
+.nav-links ul {
+    width: 150px;
+    list-style: none;
+    display: none;
+    position: absolute;
+    left: -70px;
+    top: 10px;
+    font-size: 20px;
+background-color:var(--background-hover);
+border-radius: 10px;
+text-transform: capitalize;
+}
+.nav-links:hover ul{
+    display: block;
+}
+/* start media */
+@media (max-width:750px)
+{
+    .nav-links ul{
+        width: 100px;
+        font-size: 15px;
+        padding-left: 11px;
+        /* display: none; */
+        top: 10px;
+        background-color:white;
+        z-index: 3;
+    }
+}
+/* end media */
+.nav-links ul li{
+  margin-bottom: 10px;  
+  margin-top: 10px;  
+  transition: 0.3s;
+}
+.nav-links ul li:hover{
+    padding-left: 10px;
+}
+.nav-links ul a{
+    text-decoration: none;
+    color: rgba(15, 15, 15, 0.699);
+}
+/* end headr */
+/* start landing */
+div.landing{
+    background-image: url(../imgs/196333-white-mountain-wallpaper-free-stock-wallpaper.jpg);
+    background-size: cover;
+    width: var(--main-width);
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+div.text{
+    color: #0baeb1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+}
+div.text h1{
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+/* start media */
+@media (max-width:750px)
+{
+    div.text h1{
+        margin-bottom: 0px;
+    }
+    div.text p{
+        max-width: 200px;
+        text-align: center;
+    }
+}
+/* end media */
+/* end LANDING */
+/* start featurs */
+
+div.landings-cards{   
+    width:var(--main-width);
+    height: auto;
+    margin: 50px auto ;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--containrs-backgrounds);
+}
+div.landings-cards div{
+    width: calc(95%/3);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+div.landings-cards div::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    background-color:#0baeb180;
+    box-shadow: 0px 0.5px 0.5px 0.5px #0baeb16e;
+    display: none;
+}
+div.landings-cards div:hover{
+    background-color: #eeeeee88;
+}
+div.landings-cards div:hover::before{
+    display: block;
+}
+div.landings-cards i{
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    color: #0baeb1;
+}
+/* start media */
+@media (max-width:750px)
+{
+    div.landings-cards div{
+        width: 300px;
+        margin-top: 20px;
+    }
+    div.landings-cards{
+        flex-wrap: wrap;
+    }
+}
+/* end media */
+div.landings-cards h3,
+div.landings-cards p{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+/* end featurs */
+p.between-sections{
+    text-align: center;
+    margin: 100px 0px;
+}
+/* start services-section */
+div.parent-serv-section{
+    width: var(--main-width);
+    margin: auto;
+    display: flex;
+    height: 400px;
+    background-color: var(--containrs-backgrounds);
+}
+div.parent-serv-section .containr{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+div.parent-serv-section .desc-part-with-icon{
+    width: 50%;
+    height: 49%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: var(--containrs-backgrounds);
+}
+.desc-part-with-icon:hover{
+    background-color: var(--background-hover);
+    cursor: pointer;
+    border: 0.9px solid var(--main-color);
+}
+.desc-part-with-icon .txt-icon{
+    width: 100%;
+    display: flex;
+}
+.txt-icon i{
+    font-size: 25px;
+    color: var(--main-color);
+}
+.txt-icon h4{
+
+    margin-left: 30px;
+    height: 8px;
+    margin-top: 0px;
+}
+.desc-part-with-icon p{
+    font-size: 12px;
+    padding: 3px;
+    line-height: 15px;
+    font-weight: 550;
+}
+div.parent-serv-section .shapes{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+div.parent-serv-section div.shapes .white-shape{
+    width: 50%;
+    height: 50%;
+    background-image: url(../imgs/24867-white-mountain-wallpaper-top-free-white-mountain-background.jpg);
+    background-size: cover;
+    transform: translateX(25%);
+    box-shadow: 0.5px 0px 3px 1px #00000061;
+    -webkit-animation:1s linear 0s infinite alternate in-out;
+    -moz-animation:1s linear 0s infinite alternate in-out;
+    animation:1s linear 0s infinite alternate in-out;
+
+}
+div.parent-serv-section div.shapes .blue-shape{
+    height: 100%;
+    width: 25%;
+    background-color:var(--main-color);
+
+}
+@keyframes in-out{
+    to{
+        transform: translateX(50%);
+    }
+}
+/* start media */
+@media (max-width:947px)
+{
+    div.parent-serv-section .containr{
+        width: 100%;
+        height: auto;
+    }
+    div.parent-serv-section .desc-part-with-icon{
+        width: 79%;
+        height: auto;
+        display: flex;
+        margin: 5px auto;
+    }
+    .desc-part-with-icon .txt-i{
+
+        width: 100%;
+    }
+    div.parent-serv-section div.shapes{
+        display: none;
+    }
+    div.parent-serv-section{
+        height: auto;
+    }
+}
+/* end media */
+/* end services-section */
+/* start portfolio */
+.portfolio-section{
+    width: var(--main-width);
+    margin: auto;
+    background-color: var(--containrs-backgrounds);
+}
+.portfolio-section div.containr{
+    width:var(--main-width);
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+.proj-pic{
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #eee;
+    overflow: hidden;
+}
+.proj-pic p{
+    font-size: 13px;
+    line-height: 17px;
+}
+.img{
+    width: 100%;
+    height: 65%;
+}
+.portfolio-section div img
+{
+    width: 100%;
+    height: 100%;
+}
+.proj-pic:hover{
+    background-color: #e2e2e2;
+    cursor: pointer;
+}
+/* start media */
+@media (max-width:1000px)
+{
+    .portfolio-section{
+        height: 1200px;
+    }
+    .portfolio-section div.containr{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .proj-pic{
+        width: 70%;
+    }
+}
+@media (max-width:560px)
+{
+    .proj-pic{
+        width: 100%;
+    }
+}
+/* end media */
+/* end portfolio */
+/* start about section */
+div.about-sec{
+    width: var(--main-width);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--containrs-backgrounds);
+}
+div.art{
+    width: 400px;
+    height: 400px;
+    display: flex;
+}
+.white-shape{
+    width: 20%;
+    height: 100%;
+    transform: translateX(20px);
+    background-color: #c0c0c0;
+}
+div.art .pic{
+    width: 60%;
+    height: var(--main-width);
+    margin-top: 60px;
+    background-image: url(../imgs/24867-white-mountain-wallpaper-top-free-white-mountain-background.jpg);
+    background-size: cover;
+    z-index: 1;
+    box-shadow: 1px 2px 7px 4px rgb(0 0 0 / 46%);
+}
+div.art .blue-shape{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    align-items: end;
+    transform: translateX(-25%);
+}
+div.blue-shape .shape-one{
+    height: 100%;
+    width: 50%;
+    background-color: var(--main-color);
+}
+div.blue-shape .shape-two
+{
+    width: 50%;
+    height: 20%;
+    margin-left: -1px;
+    background-color:var(--main-color);
+}
+div.intro{
+    width:40%;
+    line-height: 20px;
+}
+p.one{
+width: 100%;
+margin-bottom: 60px;
+position: relative;
+font-weight: 500;
+}
+p.one::before{
+    content: "";
+    width: 50%;
+    height: 2px;
+    left: 0px;
+    bottom: -30px;
+    background-color: var(--main-color);
+    position: absolute;
+
+}
+/* start media */
+@media (max-width:1000px)
+{
+
+    div.art{
+        width: 200px;
+        height: 200px;
+    }
+
+    div.intro{
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+    p.one::before{
+        left: 25%;
+    }
+}
+/* end media */
+/* end about section */
+/* start contact sec */
+div.contact-sec{
+    width: 100%;
+    height: 300px;
+    padding: 1px;
+    text-align: center;
+    background-color: var(--containrs-backgrounds);
+}
+div.contact-sec .intro{
+    font-size: 40px;
+    font-weight: 800;
+    color: #044a4b;
+}
+div.contact-sec .gmail{
+    font-size: 30px;
+    text-transform: lowercase;
+    font-weight: 800;
+    color: var(--main-color);
+}
+div.social-icons span{
+    font-size: 15px;
+}
+div.social-icons i{
+    font-size: 25px;
+    margin-left: 10px;
+    color: black;
+}
+/* start media */
+@media (max-width:516px){
+    div.contact-sec .gmail{
+        font-size: 20px;
+    }
+}
+/* end media */
+/* end contact sec */
+/* start footer */
+div.footer{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#044a4b;
+}
+div.footer p{
+    color: white;
+}
+/* end footer */
+/* start botton up */
+.botton{
+    width: 50px;
+    height: 50px;
+    border-radius: 35px;
+    background-color:#0baeb194;
+    bottom: 95px;
+    right: 30px;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.botton-link{
+    text-decoration: none;
+    color: white;
+}
+
+/* end botton up */
